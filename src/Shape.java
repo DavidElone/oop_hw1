@@ -12,9 +12,12 @@ public abstract class Shape implements Cloneable {
 	private Color color;
 
 	
-	// TODO: Write Abstraction Function
+	//Abstraction Function:
+    // Shape is represented by his location and his color.
+    // location is defined by the top left corner of the bounding rectangle of Shape.
 	
-	// TODO: Write Representation Invariant
+	// Rep. Invariant :
+    // location.x >=0 and location.y >=0
 	
 	
 	/**
@@ -23,6 +26,7 @@ public abstract class Shape implements Cloneable {
     public Shape(Point location, Color color) {
     	setLocation(location);
     	setColor(color);
+        checkRep();
     }
 
 
@@ -31,8 +35,8 @@ public abstract class Shape implements Cloneable {
      */
     public Point getLocation() {
     	// TODO: Implement this method. done
-
-    	location.getLocation();
+        checkRep();
+    	return location.getLocation();
     	
     }
 
@@ -43,7 +47,9 @@ public abstract class Shape implements Cloneable {
      * 			returns location after call has completed.
      */
     public void setLocation(Point location) {
+        checkRep();
     	this.location = (Point)location.clone();
+        checkRep();
     }
 
 
@@ -71,7 +77,8 @@ public abstract class Shape implements Cloneable {
      * 		   this and false otherwise.
      */
     public boolean contains(Point point) {
-    	return getBounds().contains(point);
+        checkRep();
+        return getBounds().contains(point);
     }
         
 
@@ -79,7 +86,8 @@ public abstract class Shape implements Cloneable {
      * @return color of this.
      */
     public Color getColor() {
-    	return color;
+        checkRep();
+        return color;
     }
 
 
@@ -88,7 +96,9 @@ public abstract class Shape implements Cloneable {
      * @effects Sets color of this.
      */
     public void setColor(Color color) {
+        checkRep();
     	this.color = color;
+        checkRep();
     }
 
 
@@ -104,6 +114,7 @@ public abstract class Shape implements Cloneable {
      */
     public Object clone() {
     	// TODO: Implement this method. done
+        checkRep();
         Shape cloned = null;
         try{
             cloned = (Shape)super.clone();
@@ -112,6 +123,14 @@ public abstract class Shape implements Cloneable {
             e.printStackTrace();
         }
         return cloned;
+
+    }
+    /**
+     * @effects check
+     */
+    protected void checkRep() {
+        assert location.x >=0 : "location.x is negative";
+        assert location.y >=0 : "location.y is negative";
 
     }
 }

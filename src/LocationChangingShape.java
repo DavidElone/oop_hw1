@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Random;
 
 
 /**
@@ -10,10 +11,14 @@ import java.awt.*;
  */
 public abstract class LocationChangingShape extends Shape implements Animatable {
 
-	// TODO: Write Abstraction Function
-	
-	// TODO: Write Representation Invariant
+	// Abstraction Function
+    //Shape that have a velocity (velocityX,velocityY)
 
+    // Rep. invariant
+    // on initialization only, velocityX, velocityY must be a number between -5 and 5 without being 0
+
+    private int velocityX;
+    private int velocityY;
 	
 	/**
 	 * @effects Initializes this with a a given location and color. Each
@@ -23,18 +28,27 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
 	 */
 	LocationChangingShape(Point location, Color color) {
     	// TODO: Implement this constructor
-
-    
+        super(location,color);
+        this.velocityX = getRandomVelocity();
+        this.velocityY = getRandomVelocity();
     }
-
+    public int getRandomVelocity(){
+        checkRep();
+        Random rand = new Random();
+        int intRandom = rand.nextInt(5) +1;//get a number
+        boolean isNegative  = rand.nextBoolean();
+        if(isNegative == true){
+            intRandom = -intRandom;
+        }
+        return intRandom;
+    }
 
     /**
      * @return the horizontal velocity of this.
      */
     public int getVelocityX() {
-    	// TODO: Implement this method
-
-    	
+        checkRep();
+    	return velocityX;
     }
 
 
@@ -42,9 +56,8 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
      * @return the vertical velocity of this.
      */
     public int getVelocityY() {
-    	// TODO: Implement this method
-
-    	
+        checkRep();
+        return velocityY;
     }
 
 
@@ -54,9 +67,10 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
      * 			vertical velocity of this to velocityY.
      */
     public void setVelocity(int velocityX, int velocityY) {
-    	// TODO: Implement this method
-
-    	
+        checkRep();
+    	this.velocityX = velocityX;
+    	this.velocityY = velocityY;
+        checkRep();
     }
 
 
@@ -77,8 +91,30 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
      * 			p = p + v
      */
     public void step(Rectangle bound) {
-    	// TODO: Implement this method
+        checkRep();
+        int actualX = (int)getLocation().getX();
+        int actualY = (int)getLocation().getY();
+        int nextX = actualX + velocityX;
+        int nextY = actualY + velocityY;
+        Rectangle ourRectangle = new Rectangle(getBounds());
+        ourRectangle.setLocation(nextX,nextY);
+        boolean isOutOfBound = !bound.contains(getBounds());
+        boolean willBeOutOfBound = bound.contains(getBounds()) && !bound.contains(ourRectangle.getBounds());
+    	if(isOutOfBound || willBeOutOfBound ){
+            ourRectangle.setLocation(nextX,actualY);
+            if(!bound.contains(ourRectangle)){
+                velocityX = -velocityX;
+            }
+            ourRectangle.setLocation(actualX,nextY);
+            if(!bound.contains(ourRectangle)){
+                velocityY = -velocityY;
+            }
 
+        }
+        Point destination = new Point(actualX + velocityX,actualY + velocityY);
+        setLocation(destination);
+        checkRep();
     	
     }
+
 }

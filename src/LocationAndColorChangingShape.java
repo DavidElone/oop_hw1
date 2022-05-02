@@ -1,5 +1,5 @@
 import java.awt.*;
-
+import java.util.Random;
 
 /**
  * A ColorAndLocationChaningShape is a Shape that can change its location and color using its step()
@@ -9,9 +9,11 @@ import java.awt.*;
  */
 public abstract class LocationAndColorChangingShape extends LocationChangingShape{
 
-    // TODO (BOM): Write Abstraction Function
+    // Abstraction Function
+    //LocationChangingShape that change its color every time it moves
 
-    // TODO (BOM): Write Representation Invariant
+    // Rep. invariant
+    // like LocationChangingShape.
 
 
     /**
@@ -21,7 +23,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
      *          -5 <= i <= 5 and i != 0
      */
     LocationAndColorChangingShape(Point location, Color color) {
-        // TODO (BOM): Implement this constructor
+        super(location,color);
 
     }
 
@@ -34,8 +36,23 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
 	 *			else, does not change the color of this.
      */
     public void step(Rectangle bound) {
-        // TODO (BOM): Implement this method
+        int oldVelocityX = getVelocityX();
+        int oldVelocityY = getVelocityY();
+        super.step(bound);
+        if(getVelocityX()!=oldVelocityX || getVelocityY()!=oldVelocityY){
+            Color randomColor = getRandomColor();
+            super.setColor(randomColor);
+        }
 
 
+    }
+
+    public Color getRandomColor() {
+        Random rand = new Random();
+        int R = rand.nextInt(256);//get a random number from 0 to 255
+        int G = rand.nextInt(256);
+        int B = rand.nextInt(256);
+        Color result = new Color(R,G,B);
+        return result;
     }
 }
