@@ -82,7 +82,16 @@ public class AngleChangingSector extends Shape implements Animatable {
 
     @Override
     public void draw(Graphics g) {
+        checkRep();
 
+//        Graphics2D g2d = (Graphics2D)g;
+//        g2d.setColor(getColor());
+//        g2d.fillArc((int)getLocation().getX(), (int)getLocation().getY(), (int)dimension.getWidth(), (int)dimension.getHeight(), angle, sectorAngle);
+
+        g.setColor(this.getColor());
+        g.fillArc((int)this.getLocation().getX(), (int)this.getLocation().getY(), (int)this.getBounds().getWidth(), (int)this.getBounds().getHeight(), this.angle, this.sectorAngle);
+
+        checkRep();
     }
 
     /**

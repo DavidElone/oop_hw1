@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="Q1 and Q2 done">
+    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="Q3 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LocationAndColorChangingShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationAndColorChangingShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/AngleChangingSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/AngleChangingSector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/Animator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/Animator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/ImpossibleSizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/ImpossibleSizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingTriangle.java" afterDir="false" />
     </list>
     <list id="7cde29c7-add5-44b5-85d9-f5b87fa9588f" name="Changes by talio" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ImpossibleSizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImpossibleSizeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LocationChangingOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingOval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImpossibleSizeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/Animator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/Animator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +28,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/LocationChangingNumberedOval.java">
+    <file path="$PROJECT_DIR$/src/hw1_package/Animator.java">
       <ranges>
-        <range start1="18" end1="18" start2="18" end2="24" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="24" end1="25" start2="30" end2="48" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="4" end1="4" start2="4" end2="5" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="44" end1="45" start2="45" end2="46" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="60" end1="60" start2="61" end2="62" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="61" end1="63" start2="63" end2="67" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="175" end1="176" start2="179" end2="180" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="201" end1="211" start2="205" end2="205" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="212" end1="215" start2="206" end2="209" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="218" end1="219" start2="212" end2="213" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="222" end1="223" start2="216" end2="217" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="225" end1="227" start2="219" end2="221" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="228" end1="229" start2="222" end2="223" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
       </ranges>
     </file>
   </component>
@@ -49,6 +57,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -61,6 +70,26 @@
       <recent name="C:\Users\davidelonez\IdeaProjects\hw1_oop\src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Animator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hw1_package.Animator" />
+      <module name="hw1_oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw1_package.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Animator" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651410429593</updated>
-      <workItem from="1651410435345" duration="42660000" />
+      <workItem from="1651410435345" duration="47989000" />
     </task>
     <task id="LOCAL-00001" summary="First commit and push">
       <created>1651412154106</created>
@@ -92,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651658455281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Q3 done">
+      <created>1651669135523</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651669135523</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +149,8 @@
     <MESSAGE value="First commit and push" />
     <MESSAGE value="Second commit and push" />
     <MESSAGE value="Q1 and Q2 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Q1 and Q2 done" />
+    <MESSAGE value="Q3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Q3 done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

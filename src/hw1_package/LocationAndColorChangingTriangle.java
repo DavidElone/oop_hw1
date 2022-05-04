@@ -9,7 +9,7 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
     /**
      * @modifies initialize a hw1_package.LocationAndColorChangingTriangle with a given location, color , dimension
      */
-    LocationAndColorChangingTriangle(Point location, Color color) {
+    LocationAndColorChangingTriangle(Point location, Color color,Dimension dimension) {
         super(location,color);
         try {
             setSize(dimension);
@@ -59,8 +59,8 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
         g.setColor(this.getColor());
         int originX = (int)this.getLocation().getX();
         int originY = (int)this.getLocation().getY();
-        int[] xCoordinates = {originX,originX+ (int)this.getDimensions().getHeight(),originX + (int)this.getDimensions().getHeight()};
-        int[] yCoordinates = {originY,originY+ (int)this.getDimensions().getHeight(),originY + (int)this.getDimensions().getHeight()};
+        int[] xCoordinates = {originX,originX,originX + (int)this.getDimensions().getWidth()};
+        int[] yCoordinates = {originY,originY+ (int)this.getDimensions().getHeight(),originY};
         g.fillPolygon(xCoordinates,yCoordinates,3);
         checkRep() ;
     }

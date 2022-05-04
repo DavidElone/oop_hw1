@@ -2,6 +2,7 @@ package hw1_package;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
@@ -42,7 +43,7 @@ public class Animator extends JFrame implements ActionListener {
 	 */
 	public Animator() {
 		super("hw1_package.Animator");
-
+		shapes = new HashSet<Shape>();
 		// create main panel and menubar
 		mainPanel = (JPanel)createMainPanel();
 		getContentPane().add(mainPanel);
@@ -59,8 +60,10 @@ public class Animator extends JFrame implements ActionListener {
                 	// 		 shapes in this
 					Iterator<Shape> itr = shapes.iterator();
 					while(itr.hasNext()) {
-						if (Animatable.class.isAssignableFrom(itr.next().getClass()))
-							((Animatable) itr.next()).step(itr.next().getBounds());
+//						if (Animatable.class.isAssignableFrom(itr.next().getClass())) {
+						Animatable actualShape =(Animatable)itr.next();
+						actualShape.step(screen.getBounds());
+//						}
 					}
 
             		repaint();	// make sure that the shapes are redrawn
@@ -173,7 +176,7 @@ public class Animator extends JFrame implements ActionListener {
         }
 
 		// Insert a shape
-		else if ((source.equals(triangleItem)) ||
+		else if ((source.equals(roundedRectangleItem)) ||
       		 	 (source.equals(ovalItem)) ||
       		 	 (source.equals(numberedOvalItem)) ||
       		 	 (source.equals(sectorItem))) {
@@ -199,34 +202,24 @@ public class Animator extends JFrame implements ActionListener {
 				y = new Random().nextInt(WINDOW_HEIGHT+1);
 				boundingBoxShape.setLocation(x, y);
 			}
-//			float r_color = new Random().nextFloat();
-//			float g_color = new Random().nextFloat();
-//			float b_color = new Random().nextFloat();
-//			while(r_color == 1 && g_color == 1 && b_color == 1)
-//			{
-//				r_color = new Random().nextFloat();
-//				g_color = new Random().nextFloat();
-//				b_color = new Random().nextFloat();
-//			}
-//			Color new_c = new Color(rand.nextFloat(),rand.nextFloat(),rand.nextFloat());
 			Color c = LocationAndColorChangingShape.getRandomColor();
-			if(source.equals(triangleItem)){
-				LocationAndColorChangingTriangle s = new LocationAndColorChangingTriangle(boundingBoxShape.getLocation(),c);
-				shapes.add(s);
+			if(source.equals(roundedRectangleItem)){
+				LocationAndColorChangingTriangle s = new LocationAndColorChangingTriangle(boundingBoxShape.getLocation(),c,boundingBoxShape.getSize());
+				this.shapes.add(s);
 			}
 			else if(source.equals(ovalItem)) {
 				LocationChangingOval s = new LocationChangingOval(boundingBoxShape.getLocation(),c,boundingBoxShape.getSize());
-				shapes.add(s);
+				this.shapes.add(s);
 			}
 			else if(source.equals(numberedOvalItem)) {
 				LocationChangingNumberedOval s = new LocationChangingNumberedOval(boundingBoxShape.getLocation(),c,boundingBoxShape.getSize());
-				shapes.add(s);
+				this.shapes.add(s);
 			}
 			else {//sectorItem
-				int angle = new Random().nextInt(720+1)-360;
-				int sectorAngle = new Random().nextInt(720+1)-360;
+				int angle = new Random().nextInt(359)+1;
+				int sectorAngle = new Random().nextInt(359)+1;
 				AngleChangingSector s = new AngleChangingSector(boundingBoxShape.getLocation(),c,angle,sectorAngle,boundingBoxShape.getSize());
-				shapes.add(s);
+				this.shapes.add(s);
 			}
 			
 			repaint();

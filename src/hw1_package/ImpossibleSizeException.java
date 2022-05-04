@@ -15,7 +15,7 @@ public class ImpossibleSizeException extends Exception{
     private Dimension legalDimension;
     public ImpossibleSizeException(String errorMessage){
         super();
-        legalDimension.setSize(10,10);
+        legalDimension.setSize(64,64);
     }
     public Dimension getLegalDimension(){
         return this.legalDimension;
