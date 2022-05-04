@@ -1,8 +1,10 @@
+package hw1_package;
+
 import java.awt.*;
 
 
 /**
- * A Shape is an abstraction of a shape object. A typical Shape consists of
+ * A hw1_package.Shape is an abstraction of a shape object. A typical hw1_package.Shape consists of
  * a set of properties: {location, color, shape, size}.
  * Shapes are mutable and cloneable.
  */
@@ -13,8 +15,8 @@ public abstract class Shape implements Cloneable {
 
 	
 	//Abstraction Function:
-    // Shape is represented by his location,color,shape and size.
-    // location is defined by the top left corner of the bounding rectangle of Shape.
+    // hw1_package.Shape is represented by his location,color,shape and size.
+    // location is defined by the top left corner of the bounding rectangle of hw1_package.Shape.
 	
 	// Rep. Invariant:
     // location.x >=0 and location.y >=0
@@ -57,7 +59,7 @@ public abstract class Shape implements Cloneable {
      * @effects Resizes this so that its bounding rectangle has the specified
      * 			dimension.
      * 			If this cannot be resized to the specified dimension =>
-     * 			this is not modified, throws ImpossibleSizeException
+     * 			this is not modified, throws hw1_package.ImpossibleSizeException
      * 			(the exception suggests an alternative dimension that is
      * 			 supported by this).
      */
@@ -129,6 +131,9 @@ public abstract class Shape implements Cloneable {
         return cloned;
 
     }
+
+
+
     /**
      * @effects check
      */

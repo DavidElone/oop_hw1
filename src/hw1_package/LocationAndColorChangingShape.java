@@ -1,8 +1,10 @@
+package hw1_package;
+
 import java.awt.*;
 import java.util.Random;
 
 /**
- * A ColorAndLocationChaningShape is a Shape that can change its location and color using its step()
+ * A ColorAndLocationChaningShape is a hw1_package.Shape that can change its location and color using its step()
  * method.
  * Thus, a typical ColorAndLocationChaningShape consists of the following set of
  * properties: {location, color, shape, size, velocity}
@@ -10,10 +12,10 @@ import java.util.Random;
 public abstract class LocationAndColorChangingShape extends LocationChangingShape{
 
     // Abstraction Function
-    //LocationChangingShape that change its color every time it moves
+    //hw1_package.LocationChangingShape that change its color every time it moves
 
     // Rep. invariant
-    // like LocationChangingShape.
+    // like hw1_package.LocationChangingShape.
 
 
     /**
@@ -31,8 +33,8 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
     /**
      * @modifies this
      * @effects Changes the location of this as described in the specification
-     *          of LocationChangingShape.step(Rectangle bound) &&
-	 *			if the velocity of this needs to be changed (as described in LocationChangingShape.step(Rectangle bound)),
+     *          of hw1_package.LocationChangingShape.step(Rectangle bound) &&
+	 *			if the velocity of this needs to be changed (as described in hw1_package.LocationChangingShape.step(Rectangle bound)),
 	 *			changes the color of this to a new random color;
 	 *			else, does not change the color of this.
      */
@@ -51,7 +53,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
     /**
      * @effects return a random color.
      */
-    public Color getRandomColor() {
+    public static Color getRandomColor() {
         Random rand = new Random();
         int R = rand.nextInt(256);//get a random number from 0 to 255
         int G = rand.nextInt(256);

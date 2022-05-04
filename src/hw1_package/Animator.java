@@ -1,5 +1,10 @@
+package hw1_package;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Set;
 import javax.swing.*;
 
 /**
@@ -18,7 +23,7 @@ public class Animator extends JFrame implements ActionListener {
 	private JMenuBar menuBar;
 	private JMenu fileMenu, insertMenu, helpMenu;
 	private JMenuItem newItem, exitItem,
-						rectangleItem, roundedRectangleItem, ovalItem,
+						rectangleItem, roundedRectangleItem, ovalItem,triangleItem,
 						numberedOvalItem, sectorItem, aboutItem;
 	private JCheckBoxMenuItem animationCheckItem;
 	private JPanel mainPanel;
@@ -26,6 +31,7 @@ public class Animator extends JFrame implements ActionListener {
 	// shapes that have been added to this
 	
 	// TODO: Add and initialize a container of shapes called shapes.
+	private Set<Shape> shapes;
 	
 
 	/**
@@ -35,7 +41,7 @@ public class Animator extends JFrame implements ActionListener {
 	 * 			checkbox is selected.
 	 */
 	public Animator() {
-		super("Animator");
+		super("hw1_package.Animator");
 
 		// create main panel and menubar
 		mainPanel = (JPanel)createMainPanel();
@@ -51,8 +57,11 @@ public class Animator extends JFrame implements ActionListener {
                 if (animationCheckItem.isSelected()) {
                 	// TODO: Add code for making one animation step for all
                 	// 		 shapes in this
-
-                	
+					Iterator<Shape> itr = shapes.iterator();
+					while(itr.hasNext()) {
+						if (Animatable.class.isAssignableFrom(itr.next().getClass()))
+							((Animatable) itr.next()).step(itr.next().getBounds());
+					}
 
             		repaint();	// make sure that the shapes are redrawn
                 }
@@ -132,6 +141,10 @@ public class Animator extends JFrame implements ActionListener {
 		super.paint(g);
 
 		//TODO: Add code for drawing all shapes in this
+		Iterator<Shape> itr = this.shapes.iterator();
+		while(itr.hasNext()){
+			itr.next().draw(g);
+		}
 
 		
 	}
@@ -151,6 +164,7 @@ public class Animator extends JFrame implements ActionListener {
 			repaint();
 			
 			//TODO  Add code for number of LocationChangingNumerOval = 0
+			LocationChangingNumberedOval.resetNumberOfNumberedOval();
 		}
 
 		// File->Exit: close application
@@ -159,8 +173,7 @@ public class Animator extends JFrame implements ActionListener {
         }
 
 		// Insert a shape
-		else if ((source.equals(rectangleItem)) ||
-      		 	 (source.equals(roundedRectangleItem)) ||
+		else if ((source.equals(triangleItem)) ||
       		 	 (source.equals(ovalItem)) ||
       		 	 (source.equals(numberedOvalItem)) ||
       		 	 (source.equals(sectorItem))) {
@@ -170,7 +183,51 @@ public class Animator extends JFrame implements ActionListener {
 			//		 its location and size are randomly selected &&
 			//		 1/10*WINDOW_WIDTH <= shape.width < 3/10*WINDOW_WIDTH &&
 			//		 1/10*WINDOW_HEIGHT <= shape.height < 3/10*WINDOW_HEIGHT
-		
+
+			int width = (int)(new Random().nextInt((int)(0.3*WINDOW_WIDTH)+1) + 0.1*WINDOW_WIDTH) ;
+			int height = (int)(new Random().nextInt((int)(0.3*WINDOW_HEIGHT)+1) + 0.1*WINDOW_HEIGHT) ;
+
+			int x = new Random().nextInt(WINDOW_WIDTH+1);
+			int y = new Random().nextInt(WINDOW_HEIGHT+1);
+
+			Rectangle window = new Rectangle(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
+			Rectangle boundingBoxShape = new Rectangle(x,y,width,height);
+
+			while(!window.contains(boundingBoxShape))
+			{
+				x = new Random().nextInt(WINDOW_WIDTH+1);
+				y = new Random().nextInt(WINDOW_HEIGHT+1);
+				boundingBoxShape.setLocation(x, y);
+			}
+//			float r_color = new Random().nextFloat();
+//			float g_color = new Random().nextFloat();
+//			float b_color = new Random().nextFloat();
+//			while(r_color == 1 && g_color == 1 && b_color == 1)
+//			{
+//				r_color = new Random().nextFloat();
+//				g_color = new Random().nextFloat();
+//				b_color = new Random().nextFloat();
+//			}
+//			Color new_c = new Color(rand.nextFloat(),rand.nextFloat(),rand.nextFloat());
+			Color c = LocationAndColorChangingShape.getRandomColor();
+			if(source.equals(triangleItem)){
+				LocationAndColorChangingTriangle s = new LocationAndColorChangingTriangle(boundingBoxShape.getLocation(),c);
+				shapes.add(s);
+			}
+			else if(source.equals(ovalItem)) {
+				LocationChangingOval s = new LocationChangingOval(boundingBoxShape.getLocation(),c,boundingBoxShape.getSize());
+				shapes.add(s);
+			}
+			else if(source.equals(numberedOvalItem)) {
+				LocationChangingNumberedOval s = new LocationChangingNumberedOval(boundingBoxShape.getLocation(),c,boundingBoxShape.getSize());
+				shapes.add(s);
+			}
+			else {//sectorItem
+				int angle = new Random().nextInt(720+1)-360;
+				int sectorAngle = new Random().nextInt(720+1)-360;
+				AngleChangingSector s = new AngleChangingSector(boundingBoxShape.getLocation(),c,angle,sectorAngle,boundingBoxShape.getSize());
+				shapes.add(s);
+			}
 			
 			repaint();
 		}
@@ -179,7 +236,7 @@ public class Animator extends JFrame implements ActionListener {
 		else if (source.equals(aboutItem)){
 			JOptionPane.showMessageDialog(
 					this,
-					"Animator - 1st" +
+					"hw1_package.Animator - 1st" +
 					" homework assignment",
 					"About",
 					JOptionPane.INFORMATION_MESSAGE);
@@ -188,7 +245,7 @@ public class Animator extends JFrame implements ActionListener {
 
 
 	/**
-	 * @effects Animator application.
+	 * @effects hw1_package.Animator application.
 	 */
 	public static void main(String[] args) {
         Animator application = new Animator();

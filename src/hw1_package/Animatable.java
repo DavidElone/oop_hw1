@@ -1,3 +1,5 @@
+package hw1_package;
+
 import java.awt.Rectangle;
 
 /**

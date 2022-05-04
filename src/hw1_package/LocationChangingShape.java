@@ -1,9 +1,11 @@
+package hw1_package;
+
 import java.awt.*;
 import java.util.Random;
 
 
 /**
- * A LocationChaningShape is a Shape that can change its location using its step()
+ * A LocationChaningShape is a hw1_package.Shape that can change its location using its step()
  * method. A LocationChaningShape has a velocity property that determines the speed
  * of location changing.
  * Thus, a typical LocationChaningShape consists of the following set of
@@ -12,7 +14,7 @@ import java.util.Random;
 public abstract class LocationChangingShape extends Shape implements Animatable {
 
 	// Abstraction Function
-    //Shape that have a velocity v = (velocityX,velocityY)
+    //hw1_package.Shape that have a velocity v = (velocityX,velocityY)
 
     // Rep. invariant
     // on initialization only, velocityX, velocityY must be a number between -5 and 5 without being 0

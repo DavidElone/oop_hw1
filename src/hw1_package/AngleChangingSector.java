@@ -1,5 +1,6 @@
+package hw1_package;
+
 import java.awt.*;
-import java.util.Random;
 
 public class AngleChangingSector extends Shape implements Animatable {
     private int angle;

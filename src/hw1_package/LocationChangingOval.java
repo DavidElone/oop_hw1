@@ -1,11 +1,12 @@
+package hw1_package;
+
 import java.awt.*;
-import java.awt.Graphics2D;
 
 public class LocationChangingOval extends LocationChangingShape{
 
     private Dimension dimension;
     /**
-     * @modifies initialize a LocationChangingOval with a given location, color , dimension
+     * @modifies initialize a hw1_package.LocationChangingOval with a given location, color , dimension
      */
      LocationChangingOval(Point location,Color color, Dimension dimension) {
         super(location,color);
@@ -53,7 +54,39 @@ public class LocationChangingOval extends LocationChangingShape{
      */
     @Override
     public void draw(Graphics g) {
+        checkRep() ;
+        g.setColor(this.getColor());
+        g.fillOval((int)this.getLocation().getX(), (int)this.getLocation().getY(), (int)this.getDimensions().getWidth(), (int)this.getDimensions().getHeight());
+        checkRep() ;
+    }
 
+    /**
+     * @effects Creates and returns a copy of this.
+     */
+    @Override
+    public Object clone()
+    {
+        checkRep() ;
+        LocationChangingOval clonedOval = null;
+        clonedOval = (LocationChangingOval)super.clone();
+        try
+        {
+            clonedOval.setSize(getDimensions());
+        }
+        catch (ImpossibleSizeException e)
+        {
+            clonedOval.dimension = e.getLegalDimension();
+        }
+        checkRep() ;
+        return clonedOval;
+    }
+    /**
+     * @effects check
+     */
+    protected void checkRep() {
+        super.checkRep();
+        assert ( dimension.height >= 0 ) : "height is negative";
+        assert ( dimension.width >= 0) : "width is negative";
     }
 
 

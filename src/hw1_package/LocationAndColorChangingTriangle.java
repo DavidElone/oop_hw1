@@ -1,3 +1,5 @@
+package hw1_package;
+
 import java.awt.*;
 
 public class LocationAndColorChangingTriangle extends LocationAndColorChangingShape{
@@ -5,7 +7,7 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
     Dimension dimension;
 
     /**
-     * @modifies initialize a LocationAndColorChangingTriangle with a given location, color , dimension
+     * @modifies initialize a hw1_package.LocationAndColorChangingTriangle with a given location, color , dimension
      */
     LocationAndColorChangingTriangle(Point location, Color color) {
         super(location,color);
