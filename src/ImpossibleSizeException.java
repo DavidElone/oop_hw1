@@ -1,3 +1,4 @@
+import java.awt.*;
 /**
  * @modifies this
  * @effects Resizes this so that its bounding rectangle has the specified
@@ -8,8 +9,13 @@
  * 			 supported by this).
  */
 public class ImpossibleSizeException extends Exception{
+
+    private Dimension legalDimension;
     public ImpossibleSizeException(String errorMessage){
-        super(errorMessage);
+        super();
+        legalDimension.setSize(10,10);
     }
-    //TODO continue
+    public Dimension getLegalDimension(){
+        return this.legalDimension;
+    }
 }

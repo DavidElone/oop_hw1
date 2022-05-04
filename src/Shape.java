@@ -13,10 +13,10 @@ public abstract class Shape implements Cloneable {
 
 	
 	//Abstraction Function:
-    // Shape is represented by his location and his color.
+    // Shape is represented by his location,color,shape and size.
     // location is defined by the top left corner of the bounding rectangle of Shape.
 	
-	// Rep. Invariant :
+	// Rep. Invariant:
     // location.x >=0 and location.y >=0
 	
 	
@@ -34,7 +34,6 @@ public abstract class Shape implements Cloneable {
      * @return the top left corner of the bounding rectangle of this.
      */
     public Point getLocation() {
-    	// TODO: Implement this method. done
         checkRep();
     	return location.getLocation();
     	
@@ -97,6 +96,9 @@ public abstract class Shape implements Cloneable {
      */
     public void setColor(Color color) {
         checkRep();
+//        if (color == null){
+//            this.color = new Color(0,0,0);
+//        }
     	this.color = color;
         checkRep();
     }
@@ -122,6 +124,8 @@ public abstract class Shape implements Cloneable {
         catch (CloneNotSupportedException e){
             e.printStackTrace();
         }
+        cloned.setLocation(this.location);
+        cloned.setColor(this.color);
         return cloned;
 
     }

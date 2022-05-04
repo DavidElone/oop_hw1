@@ -24,6 +24,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
      */
     LocationAndColorChangingShape(Point location, Color color) {
         super(location,color);
+        checkRep();
 
     }
 
@@ -36,6 +37,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
 	 *			else, does not change the color of this.
      */
     public void step(Rectangle bound) {
+        checkRep();
         int oldVelocityX = getVelocityX();
         int oldVelocityY = getVelocityY();
         super.step(bound);
@@ -46,7 +48,9 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
 
 
     }
-
+    /**
+     * @effects return a random color.
+     */
     public Color getRandomColor() {
         Random rand = new Random();
         int R = rand.nextInt(256);//get a random number from 0 to 255

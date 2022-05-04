@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="First commit and push">
-      <change afterPath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LocationChangingOval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="Second commit and push">
+      <change afterPath="$PROJECT_DIR$/src/AngleChangingSector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LocationAndColorChangingTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorAndLocationChangingShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationAndColorChangingShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImpossibleSizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImpossibleSizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocationAndColorChangingShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationAndColorChangingShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocationChangingOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingOval.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LocationChangingShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shape.java" afterDir="false" />
+    </list>
+    <list id="7cde29c7-add5-44b5-85d9-f5b87fa9588f" name="Changes by talio" comment="">
+      <change beforePath="$PROJECT_DIR$/src/ImpossibleSizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImpossibleSizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingNumberedOval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocationChangingOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocationChangingOval.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +32,52 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/ImpossibleSizeException.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="10" end1="10" start2="11" end2="13" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="11" end1="12" start2="14" end2="16" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="13" end1="14" start2="17" end2="20" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="15" end1="15" start2="21" end2="83" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/LocationChangingOval.java">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="9" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="12" end1="13" start2="14" end2="15" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="16" end1="16" start2="18" end2="22" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="17" end1="18" start2="23" end2="25" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="19" end1="19" start2="26" end2="29" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="29" end1="30" start2="39" end2="42" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="36" end1="36" start2="48" end2="49" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="37" end1="37" start2="50" end2="53" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="39" end1="40" start2="55" end2="59" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="41" end1="41" start2="60" end2="89" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="42" end1="43" start2="90" end2="90" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Shape.java">
+      <ranges>
+        <range start1="15" end1="16" start2="15" end2="16" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="18" end1="19" start2="18" end2="19" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="36" end1="37" start2="36" end2="36" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="99" end1="99" start2="98" end2="101" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="124" end1="124" start2="126" end2="128" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="127" end1="127" start2="131" end2="134" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/LocationChangingNumberedOval.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="8" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="7" end1="8" start2="10" end2="10" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="10" end1="10" start2="12" end2="15" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="15" end1="16" start2="20" end2="21" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="19" end1="20" start2="24" end2="29" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="21" end1="21" start2="30" end2="43" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651410429593</updated>
-      <workItem from="1651410435345" duration="22326000" />
+      <workItem from="1651410435345" duration="36994000" />
     </task>
     <task id="LOCAL-00001" summary="First commit and push">
       <created>1651412154106</created>
@@ -68,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651412154106</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit and push">
+      <created>1651502619438</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651502619438</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,7 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit and push" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit and push" />
+    <MESSAGE value="Second commit and push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit and push" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

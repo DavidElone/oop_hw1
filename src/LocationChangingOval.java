@@ -4,19 +4,29 @@ import java.awt.Graphics2D;
 public class LocationChangingOval extends LocationChangingShape{
 
     private Dimension dimension;
-
+    /**
+     * @modifies initialize a LocationChangingOval with a given location, color , dimension
+     */
      LocationChangingOval(Point location,Color color, Dimension dimension) {
         super(location,color);
          try {
              setSize(dimension);
          } catch (ImpossibleSizeException e) {
-             e.printStackTrace();
+             this.dimension = e.getLegalDimension();
          }
          checkRep();
     }
+    /**
+
+     * @effects return dimension of this
+     */
     public Dimension getDimensions(){
-         return dimension;
+        checkRep();
+        return dimension;
     }
+    /**
+     * @modifies this.dimension
+     */
     @Override
     public void setSize(Dimension dimension) throws ImpossibleSizeException {
 
@@ -27,19 +37,24 @@ public class LocationChangingOval extends LocationChangingShape{
              this.dimension = dimension;
          }
     }
-
+    /**
+     * @effects returns rectangle that is the bounding box of this.
+     */
     @Override
     public Rectangle getBounds() {
 
          Rectangle result = new Rectangle(getLocation(),getDimensions());
          return result;
     }
+    /**
 
+     * @modifies g
+     * @effects Draws this into g.
+     */
     @Override
     public void draw(Graphics g) {
 
     }
 
-    @Override
 
 }

@@ -12,7 +12,7 @@ import java.util.Random;
 public abstract class LocationChangingShape extends Shape implements Animatable {
 
 	// Abstraction Function
-    //Shape that have a velocity (velocityX,velocityY)
+    //Shape that have a velocity v = (velocityX,velocityY)
 
     // Rep. invariant
     // on initialization only, velocityX, velocityY must be a number between -5 and 5 without being 0
@@ -27,11 +27,15 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
 	 *          -5 <= i <= 5 and i != 0
 	 */
 	LocationChangingShape(Point location, Color color) {
-    	// TODO: Implement this constructor
         super(location,color);
         this.velocityX = getRandomVelocity();
         this.velocityY = getRandomVelocity();
+        checkRep();
     }
+    /**
+     * @effects returns a random integral value i such that
+     *          -5 <= i <= 5 and i != 0
+     */
     public int getRandomVelocity(){
         checkRep();
         Random rand = new Random();
@@ -115,6 +119,15 @@ public abstract class LocationChangingShape extends Shape implements Animatable 
         setLocation(destination);
         checkRep();
     	
+    }
+    /**
+     * @effects Creates and returns a copy of this.
+     */
+    @Override
+    public Object clone() {
+        checkRep();
+        LocationChangingShape cloned = (LocationChangingShape)super.clone();
+        return cloned;
     }
 
 }
