@@ -7,6 +7,16 @@ public class AngleChangingSector extends Shape implements Animatable {
     private int sectorAngle;
     private Dimension dimension;
 
+    //Abstraction Function:
+    // hw1_package.AngleChangingSector is a shape animatable that rotate according a specified angle.
+
+    // Rep. Invariant:
+    // dimension.height >= 0
+    // dimension.width >= 0
+    // 0 =< angle < 360
+    // 0 =< sectorAngle < 360
+
+
     /**
      * @effects Initializes this with a given location, color, start angle of the sector
      * 			and the sector angle and his boundingbox(dimension)
@@ -79,18 +89,15 @@ public class AngleChangingSector extends Shape implements Animatable {
         Rectangle result = new Rectangle(getLocation(),getDimensions());
         return result;
     }
-
+    /**
+     * @modifies g
+     * @effects Draws this into g.
+     */
     @Override
     public void draw(Graphics g) {
         checkRep();
-
-//        Graphics2D g2d = (Graphics2D)g;
-//        g2d.setColor(getColor());
-//        g2d.fillArc((int)getLocation().getX(), (int)getLocation().getY(), (int)dimension.getWidth(), (int)dimension.getHeight(), angle, sectorAngle);
-
         g.setColor(this.getColor());
         g.fillArc((int)this.getLocation().getX(), (int)this.getLocation().getY(), (int)this.getBounds().getWidth(), (int)this.getBounds().getHeight(), this.angle, this.sectorAngle);
-
         checkRep();
     }
 

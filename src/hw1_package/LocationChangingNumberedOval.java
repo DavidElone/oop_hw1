@@ -5,17 +5,27 @@ import java.awt.*;
 public class LocationChangingNumberedOval extends LocationChangingOval{
     private int serialNumber;
     private static int numberOfNumberedOval=0;
+
+    // Abstraction Function
+    //hw1_package.LocationChangingNumberedOval is a LocationChangingOval that have a serial number is in center.
+
+    // Rep. invariant
+    // like hw1_package.LocationChangingOval. Moreover serialNumber > 0 and  numberOfNumberedOval >= 0
+
+
     /**
      * @effects Initializes this with a serial number.
      */
     LocationChangingNumberedOval(Point location, Color color, Dimension dimension) {
         super(location, color, dimension);
         serialNumber = ++numberOfNumberedOval;
+        checkRep();
     }
     /**
      * @effects get the serialNumber of this
      */
     public int getSerialNumber(){
+        checkRep();
         return serialNumber;
     }
     /**

@@ -5,6 +5,12 @@ import java.awt.*;
 public class LocationAndColorChangingTriangle extends LocationAndColorChangingShape{
 
     Dimension dimension;
+    // Abstraction Function
+    //hw1_package.LocationAndColorChangingTriangle is a LocationAndColorChangingShape that have a triangular form.
+
+    // Rep. invariant
+    // like hw1_package.LocationAndColorChangingShape.
+
 
     /**
      * @modifies initialize a hw1_package.LocationAndColorChangingTriangle with a given location, color , dimension
@@ -25,18 +31,20 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
      */
     @Override
     public void setSize(Dimension dimension) throws ImpossibleSizeException {
-
+        checkRep();
         if(dimension.getHeight() < 0 || dimension.getWidth() < 0){
             throw new ImpossibleSizeException("size cannot be negative");
         }
         else{
             this.dimension = dimension;
         }
+        checkRep();
     }
     /**
      * @effects return dimension of this
      */
     public Dimension getDimensions(){
+        checkRep();
         return dimension;
     }
     /**
@@ -44,7 +52,7 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
      */
     @Override
     public Rectangle getBounds() {
-
+        checkRep();
         Rectangle result = new Rectangle(this.getLocation(),this.getDimensions());
         return result;
     }

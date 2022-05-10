@@ -12,7 +12,7 @@ import java.util.Random;
 public abstract class LocationAndColorChangingShape extends LocationChangingShape{
 
     // Abstraction Function
-    //hw1_package.LocationChangingShape that change its color every time it moves
+    //hw1_package.LocationChangingShape is a LocationChangingShape that changes its color every time it rebound on the limit window.
 
     // Rep. invariant
     // like hw1_package.LocationChangingShape.
@@ -47,6 +47,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
             Color randomColor = getRandomColor();
             super.setColor(randomColor);
         }
+        checkRep();
 
 
     }

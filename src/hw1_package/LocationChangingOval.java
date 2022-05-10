@@ -5,6 +5,16 @@ import java.awt.*;
 public class LocationChangingOval extends LocationChangingShape{
 
     private Dimension dimension;
+
+    // Abstraction Function
+    //hw1_package.LocationChangingOval is a LocationChangingShape that have an oval form.
+
+    // Rep. invariant
+    // like hw1_package.LocationChangingShape. Moreover :
+    // dimension.height >= 0
+    // dimension.width >= 0
+
+
     /**
      * @modifies initialize a hw1_package.LocationChangingOval with a given location, color , dimension
      */
@@ -30,20 +40,21 @@ public class LocationChangingOval extends LocationChangingShape{
      */
     @Override
     public void setSize(Dimension dimension) throws ImpossibleSizeException {
-
-         if(dimension.getHeight() < 0 || dimension.getWidth() < 0){
+        checkRep();
+        if(dimension.getHeight() < 0 || dimension.getWidth() < 0){
              throw new ImpossibleSizeException("size cannot be negative");
-         }
-         else{
+        }
+        else{
              this.dimension = dimension;
-         }
+        }
+        checkRep();
     }
     /**
      * @effects returns rectangle that is the bounding box of this.
      */
     @Override
     public Rectangle getBounds() {
-
+         checkRep();
          Rectangle result = new Rectangle(getLocation(),getDimensions());
          return result;
     }
@@ -80,6 +91,7 @@ public class LocationChangingOval extends LocationChangingShape{
         checkRep() ;
         return clonedOval;
     }
+
     /**
      * @effects check
      */

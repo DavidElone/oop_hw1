@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="Q3 done">
+    <list default="true" id="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" name="Changes" comment="hw1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw1_package/AngleChangingSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/AngleChangingSector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw1_package/Animator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/Animator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw1_package/ImpossibleSizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/ImpossibleSizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/LocationAndColorChangingTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/LocationChangingNumberedOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/LocationChangingNumberedOval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1_package/LocationChangingOval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1_package/LocationChangingOval.java" afterDir="false" />
     </list>
     <list id="7cde29c7-add5-44b5-85d9-f5b87fa9588f" name="Changes by talio" comment="">
       <change beforePath="$PROJECT_DIR$/src/ImpossibleSizeException.java" beforeDir="false" />
@@ -30,17 +33,36 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/hw1_package/Animator.java">
       <ranges>
-        <range start1="4" end1="4" start2="4" end2="5" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="44" end1="45" start2="45" end2="46" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="60" end1="60" start2="61" end2="62" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
-        <range start1="61" end1="63" start2="63" end2="67" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="175" end1="176" start2="179" end2="180" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="201" end1="211" start2="205" end2="205" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="212" end1="215" start2="206" end2="209" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="218" end1="219" start2="212" end2="213" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="222" end1="223" start2="216" end2="217" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="225" end1="227" start2="219" end2="221" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
-        <range start1="228" end1="229" start2="222" end2="223" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="9" end1="10" start2="9" end2="9" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="26" end1="28" start2="25" end2="27" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="32" end1="33" start2="31" end2="32" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="35" end1="36" start2="34" end2="34" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="44" end1="45" start2="42" end2="43" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="50" end1="51" start2="48" end2="49" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="52" end1="53" start2="50" end2="51" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="55" end1="60" start2="53" end2="56" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="61" end1="61" start2="57" end2="58" changelist="7cde29c7-add5-44b5-85d9-f5b87fa9588f" />
+        <range start1="63" end1="65" start2="60" end2="62" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="68" end1="73" start2="65" end2="72" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="80" end1="85" start2="79" end2="84" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="86" end1="87" start2="85" end2="86" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="94" end1="95" start2="93" end2="94" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="96" end1="106" start2="95" end2="105" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="107" end1="124" start2="106" end2="120" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="125" end1="130" start2="121" end2="126" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="131" end1="132" start2="127" end2="128" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="151" end1="152" start2="147" end2="147" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="167" end1="169" start2="162" end2="163" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="174" end1="176" start2="168" end2="170" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="178" end1="182" start2="172" end2="176" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="188" end1="189" start2="182" end2="182" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="205" end1="206" start2="198" end2="199" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="223" end1="224" start2="216" end2="217" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="231" end1="233" start2="224" end2="226" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="236" end1="237" start2="229" end2="230" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="240" end1="241" start2="233" end2="234" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="243" end1="244" start2="236" end2="237" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
+        <range start1="245" end1="249" start2="238" end2="242" changelist="fd2db3e9-ca7f-47bd-a1b0-2df3463eee85" />
       </ranges>
     </file>
   </component>
@@ -53,24 +75,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propDebugger"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\davidelonez\IdeaProjects\hw1_oop\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Animator">
     <configuration name="Animator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hw1_package.Animator" />
       <module name="hw1_oop" />
@@ -84,9 +106,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="homework1.Animator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework1.Animator" />
+      <module name="hw1_oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Animator" />
+        <item itemvalue="Application.homework1.Animator" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +134,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651410429593</updated>
-      <workItem from="1651410435345" duration="47989000" />
+      <workItem from="1651410435345" duration="48314000" />
+      <workItem from="1651936730015" duration="5127000" />
     </task>
     <task id="LOCAL-00001" summary="First commit and push">
       <created>1651412154106</created>
@@ -128,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651669135523</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="hw1 done">
+      <created>1651674503924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651674503924</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +194,8 @@
     <MESSAGE value="Second commit and push" />
     <MESSAGE value="Q1 and Q2 done" />
     <MESSAGE value="Q3 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Q3 done" />
+    <MESSAGE value="hw1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw1 done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
