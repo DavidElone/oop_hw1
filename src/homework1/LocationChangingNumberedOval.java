@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 
@@ -58,5 +58,13 @@ public class LocationChangingNumberedOval extends LocationChangingOval{
         clonedNumberedOval.serialNumber = ++numberOfNumberedOval;
         checkRep() ;
         return clonedNumberedOval;
+    }
+    /**
+     * @effects check
+     */
+    private void checkRep() {
+    	assert (numberOfNumberedOval>=0) :"number_of_instances is negative";
+        assert ( (serialNumber<=numberOfNumberedOval) && (serialNumber > 0) ) : "private_number out of range";
+       
     }
 }

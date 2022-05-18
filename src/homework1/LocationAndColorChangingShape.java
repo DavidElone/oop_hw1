@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 import java.util.Random;
@@ -16,6 +16,7 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
 
     // Rep. invariant
     // like hw1_package.LocationChangingShape.
+	// In this class, no need for checkRep() because all the new field are primitive variable and have no real constrain
 
 
     /**
@@ -26,7 +27,6 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
      */
     LocationAndColorChangingShape(Point location, Color color) {
         super(location,color);
-        checkRep();
 
     }
 
@@ -39,7 +39,6 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
 	 *			else, does not change the color of this.
      */
     public void step(Rectangle bound) {
-        checkRep();
         int oldVelocityX = getVelocityX();
         int oldVelocityY = getVelocityY();
         super.step(bound);
@@ -47,7 +46,6 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
             Color randomColor = getRandomColor();
             super.setColor(randomColor);
         }
-        checkRep();
 
 
     }
@@ -61,5 +59,13 @@ public abstract class LocationAndColorChangingShape extends LocationChangingShap
         int B = rand.nextInt(256);
         Color result = new Color(R,G,B);
         return result;
+    }
+    /**
+     * @effects Creates and returns a copy of this.
+     */
+    @Override
+    public Object clone() {
+        LocationAndColorChangingShape cloned = (LocationAndColorChangingShape)super.clone();
+        return cloned;
     }
 }

@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.Rectangle;
 

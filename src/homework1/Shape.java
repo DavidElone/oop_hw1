@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 
@@ -26,8 +26,10 @@ public abstract class Shape implements Cloneable {
 	 * @effects Initializes this with a a given location and color.
 	 */
     public Shape(Point location, Color color) {
-    	setLocation(location);
-    	setColor(color);
+    	Point location_ = location == null ? new Point(0,0) : location;
+    	Color color_ = color == null ? new Color(0,0,0) : color;
+    	this.location = location_;
+    	this.color = color_;
         checkRep();
     }
 
@@ -49,7 +51,8 @@ public abstract class Shape implements Cloneable {
      */
     public void setLocation(Point location) {
         checkRep();
-    	this.location = (Point)location.clone();
+        Point location_ = location == null ? new Point(0,0) : location;
+    	this.location = (Point)location_.clone();
         checkRep();
     }
 
@@ -98,10 +101,8 @@ public abstract class Shape implements Cloneable {
      */
     public void setColor(Color color) {
         checkRep();
-//        if (color == null){
-//            this.color = new Color(0,0,0);
-//        }
-    	this.color = color;
+        Color color_ = color == null ? new Color(0,0,0) : color;
+    	this.color = color_;
         checkRep();
     }
 
@@ -117,7 +118,6 @@ public abstract class Shape implements Cloneable {
      * @effects Creates and returns a copy of this.
      */
     public Object clone() {
-    	// TODO: Implement this method. done
         checkRep();
         Shape cloned = null;
         try{
@@ -137,7 +137,7 @@ public abstract class Shape implements Cloneable {
     /**
      * @effects check
      */
-    protected void checkRep() {
+    private void checkRep() {
         assert location.x >=0 : "location.x is negative";
         assert location.y >=0 : "location.y is negative";
 

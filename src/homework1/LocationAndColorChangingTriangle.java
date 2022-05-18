@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 
@@ -14,14 +14,11 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
 
     /**
      * @modifies initialize a hw1_package.LocationAndColorChangingTriangle with a given location, color , dimension
+     * @requires location,point,dimension !
      */
     LocationAndColorChangingTriangle(Point location, Color color,Dimension dimension) {
         super(location,color);
-        try {
-            setSize(dimension);
-        } catch (ImpossibleSizeException e) {
-            this.dimension = e.getLegalDimension();
-        }
+        this.dimension = dimension;
         checkRep();
     }
 
@@ -96,8 +93,7 @@ public class LocationAndColorChangingTriangle extends LocationAndColorChangingSh
     /**
      * @effects check
      */
-    protected void checkRep() {
-        super.checkRep();
+    private void checkRep() {
         assert ( dimension.height >= 0 ) : "height is negative";
         assert ( dimension.width >= 0) : "width is negative";
     }

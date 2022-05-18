@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 
@@ -18,6 +18,7 @@ public class AngleChangingSector extends Shape implements Animatable {
 
 
     /**
+     * @requires location, color, dimension != null
      * @effects Initializes this with a given location, color, start angle of the sector
      * 			and the sector angle and his boundingbox(dimension)
      */
@@ -99,6 +100,15 @@ public class AngleChangingSector extends Shape implements Animatable {
         g.setColor(this.getColor());
         g.fillArc((int)this.getLocation().getX(), (int)this.getLocation().getY(), (int)this.getBounds().getWidth(), (int)this.getBounds().getHeight(), this.angle, this.sectorAngle);
         checkRep();
+    }
+    /**
+     * @effects check
+     */
+    private void checkRep() {
+        assert ((angle>=0) && (angle<360)) :" angle out of range";
+        assert ((sectorAngle>0) && (sectorAngle<=360)) : "sectorAngle out of range";
+        assert (dimension.height>=0) :"dimension.height is negative";
+        assert (dimension.width>=0) :"dimension.width is negative";
     }
 
     /**

@@ -1,4 +1,4 @@
-package hw1_package;
+package homework1;
 
 import java.awt.*;
 
@@ -17,18 +17,14 @@ public class LocationChangingOval extends LocationChangingShape{
 
     /**
      * @modifies initialize a hw1_package.LocationChangingOval with a given location, color , dimension
+     * @requires dimension =! null
      */
      LocationChangingOval(Point location,Color color, Dimension dimension) {
         super(location,color);
-         try {
-             setSize(dimension);
-         } catch (ImpossibleSizeException e) {
-             this.dimension = e.getLegalDimension();
-         }
+        this.dimension = dimension;
          checkRep();
     }
     /**
-
      * @effects return dimension of this
      */
     public Dimension getDimensions(){
@@ -59,7 +55,6 @@ public class LocationChangingOval extends LocationChangingShape{
          return result;
     }
     /**
-
      * @modifies g
      * @effects Draws this into g.
      */
@@ -95,8 +90,7 @@ public class LocationChangingOval extends LocationChangingShape{
     /**
      * @effects check
      */
-    protected void checkRep() {
-        super.checkRep();
+    private void checkRep() {
         assert ( dimension.height >= 0 ) : "height is negative";
         assert ( dimension.width >= 0) : "width is negative";
     }
